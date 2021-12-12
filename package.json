@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "description": "Sample code for encrypting and decrypting data using the npm package `@sounisi5011/encrypted-archive`",
+  "homepage": "https://github.com/sounisi5011/react-native-test--using-sounisi5011-encrypted-archive#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sounisi5011/react-native-test--using-sounisi5011-encrypted-archive.git"
+  },
+  "license": "SEE LICENSE IN ./LICENSE",
+  "author": "sounisi5011",
+  "engines": {
+    "node": "16.x"
+  }
+}
