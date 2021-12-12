@@ -3,6 +3,8 @@ module.exports = {
     extraNodeModules: {
       crypto: require.resolve('crypto-browserify'),
       stream: require.resolve('readable-stream'),
+      // @sounisi5011/encrypted-archive uses the built-in `zlib` module for plaintext compression and decompression.
+      zlib: require.resolve('react-zlib-js'),
     },
     // @sounisi5011/ts-utils-is-property-accessible uses the `.cjs` extension.
     // It may not work because of this.
