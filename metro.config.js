@@ -6,11 +6,13 @@ module.exports = {
       // @sounisi5011/encrypted-archive uses the built-in `zlib` module for plaintext compression and decompression.
       zlib: require.resolve('react-zlib-js'),
     },
-    // @sounisi5011/ts-utils-is-property-accessible uses the `.cjs` extension.
-    // It may not work because of this.
-    // If the build fails, please add 'cjs' in resolver.sourceExts config.
-    // see https://github.com/thysultan/stylis.js/issues/233#issuecomment-663635896
-    sourceExts: [ 'ts', 'tsx', 'js', 'jsx', 'json', 'cjs'],
+    // + @sounisi5011/ts-utils-is-property-accessible uses the `.cjs` extension.
+    //   It may not work because of this.
+    //   If the build fails, please add 'cjs' in resolver.sourceExts config.
+    //   see https://github.com/thysultan/stylis.js/issues/233#issuecomment-663635896
+    // + The argon2-browser that @sounisi5011/encrypted-archive depends on uses WebAssembly.
+    //   For this reason, you need to add 'wasm into resolver.sourceExts config.
+    sourceExts: [ 'ts', 'tsx', 'js', 'jsx', 'json', 'cjs', 'wasm'],
   },
 };
 
