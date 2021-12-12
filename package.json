@@ -10,5 +10,8 @@
   "author": "sounisi5011",
   "engines": {
     "node": "16.x"
+  },
+  "devDependencies": {
+    "expo-cli": "4.13.0"
   }
 }
