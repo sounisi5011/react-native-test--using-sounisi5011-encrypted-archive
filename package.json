@@ -19,6 +19,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@sounisi5011/encrypted-archive": "0.1.0",
     "expo": "43.0.4",
     "expo-status-bar": "1.1.0",
     "react": "17.0.1",
