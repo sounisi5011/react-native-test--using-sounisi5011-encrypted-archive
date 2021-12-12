@@ -1,0 +1,40 @@
+{
+  "name": "sampleofencryptedarchive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample code for encrypting and decrypting data using the npm package `@sounisi5011/encrypted-archive`",
+  "homepage": "https://github.com/sounisi5011/react-native-test--using-sounisi5011-encrypted-archive#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sounisi5011/react-native-test--using-sounisi5011-encrypted-archive.git"
+  },
+  "license": "SEE LICENSE IN ./LICENSE",
+  "author": "sounisi5011",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "android": "expo start --android",
+    "eject": "expo eject",
+    "ios": "expo start --ios",
+    "start": "expo start",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "43.0.4",
+    "expo-status-bar": "1.1.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-web": "0.17.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@types/react": "17.0.37",
+    "@types/react-native": "0.64.19",
+    "expo-cli": "4.13.0",
+    "typescript": "4.5.3"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
