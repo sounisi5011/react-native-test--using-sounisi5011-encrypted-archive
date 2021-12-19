@@ -19,13 +19,17 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@sounisi5011/encrypted-archive": "0.1.0",
+    "crypto-browserify": "3.12.0",
     "expo": "43.0.4",
     "expo-status-bar": "1.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-web": "0.17.5"
+    "react-native-web": "0.17.5",
+    "react-zlib-js": "1.0.5",
+    "readable-stream": "3.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",

@@ -1,0 +1,29 @@
+module.exports = {
+  resolver: {
+    extraNodeModules: {
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('readable-stream'),
+      // @sounisi5011/encrypted-archive uses the built-in `zlib` module for plaintext compression and decompression.
+      zlib: require.resolve('react-zlib-js'),
+    },
+    // + @sounisi5011/ts-utils-is-property-accessible uses the `.cjs` extension.
+    //   It may not work because of this.
+    //   If the build fails, please add 'cjs' in resolver.sourceExts config.
+    //   see https://github.com/thysultan/stylis.js/issues/233#issuecomment-663635896
+    // + The argon2-browser that @sounisi5011/encrypted-archive depends on uses WebAssembly.
+    //   For this reason, you need to add 'wasm into resolver.sourceExts config.
+    sourceExts: [ 'ts', 'tsx', 'js', 'jsx', 'json', 'cjs', 'wasm'],
+  },
+};
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- //
+// The code below is for merging the expo default config into the new settings.
+// It is not needed for normal metro.config.js files.
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- //
+
+const { getDefaultConfig } = require('@expo/metro-config');
+const defaultConfig = getDefaultConfig(__dirname);
+const newConfig = module.exports;
+defaultConfig.resolver.sourceExts = [...new Set([...defaultConfig.resolver.sourceExts, ...newConfig.resolver.sourceExts])];
+Object.assign(defaultConfig.resolver.extraNodeModules, newConfig.resolver.extraNodeModules);
+module.exports = defaultConfig;
